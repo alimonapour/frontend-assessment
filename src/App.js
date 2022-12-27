@@ -29,7 +29,7 @@ const App = () => {
           <div className='rounded-md w-28 h-9 bg-slate-100' />
         </div>
       </header>
-      <main className='container grid grid-cols-3 pt-10 mx-auto gap-7'>
+      <main className='container grid  sm:grid-cols-3 pt-10 mx-auto gap-7'>
         <div className='flex flex-col col-span-2 gap-5'>
           <DoctorHead data={data} />
           <div className='bg-white rounded-lg h-96 bg-opacity-60' />

@@ -10,7 +10,7 @@ const DoctorHead = ({ data }) => {
 
   const handleShareClick = () => {
     const ShareData = {
-      title: data.name,
+      title: data.name + ' ' + data.family,
       url: data.profileUrl,
     }
     window.navigator.share(ShareData)
@@ -25,7 +25,7 @@ const DoctorHead = ({ data }) => {
   let waitingTimeText = waitingTimeTextArray[data.waitingTime]
 
   return (
-    <div className='flex border border-[#F1F5F9]'>
+    <div className='flex border border-[#F1F5F9] w-full'>
       <div className='w-full flex flex-col justify-around rounded p-4 bg-white'>
         <div className='flex items-center justify-between my-1.5'>
           <div className='flex justify-between'>
@@ -80,7 +80,7 @@ const DoctorHead = ({ data }) => {
             <h1 className='text-base font-light'>{data.expertise}</h1>
           </div>
         </div>
-        <div className='flex items-center mx-auto mt-2'>
+        <div className='flex flex-col sm:flex-row items-center mx-auto mt-2'>
           <div
             className={
               data.satisfaction > 90
